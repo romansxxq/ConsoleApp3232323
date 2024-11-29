@@ -11,36 +11,47 @@ namespace ConsoleApp3
         static void Main(string[] args)
         {
             //Ex.1
-            //for (int i = 0; i <= 123; i++) {
-
+            //int i = 14;
+            //while (i <= 123)
+            //{
+            //    Console.WriteLine(i);
+            //    i++;
             //}
             //Ex.2
-            //for (int i = 0; i<100; i++) { 
-            //    if (i % 2 != 0) {
+            //int i = 0;
+            //while (i < 100)
+            //{
+            //    if (i % 2 != 0)
+            //    {
             //        Console.WriteLine(i);
             //    }
+            //    i++;
             //}
 
             //Ex.3
+            Console.Write("Enter numbers (N>0): ");
+            int N = int.Parse(Console.ReadLine());
 
+            if (N <= 0) {
+                Console.WriteLine("N should be < 0");
+                return;
+            }
 
+            int countNega = 0;
+            int i = 0;
+
+            while (i < N)
+            {
+                Console.Write("Enter num: ");
+                int num = int.Parse(Console.ReadLine());
+                if (num < 0) { 
+                    countNega++;
+                }
+                i++;
+            }
+            Console.WriteLine($"Numbers negative: {countNega}");
             //Ex.4
-            //int num1 = 8;
-            //int num2;
-            //double dobutok = 1;
-            //double suma = 0;
 
-            //Console.WriteLine("Enter 8 nums: ");
-            //for (int i = 0; i < num1; i++)
-            //{
-            //    num2 = int.Parse(Console.ReadLine());
-
-            //    dobutok *= num1;
-            //    suma += num1;
-            //}
-            //Console.WriteLine($"Dobutok: {dobutok}");
-            //Console.WriteLine($"Suma: {suma}");
-            //Console.WriteLine($"Average: {suma / num1}");
 
             //Ex.5
 
@@ -116,17 +127,17 @@ namespace ConsoleApp3
             //Console.WriteLine(sum);
 
             //Ex.11
-            double sum = 0;
-            double num;
+            //double sum = 0;
+            //double num;
 
-            for (; ; ) { 
-                num = int.Parse(Console.ReadLine());
-                if (num == 0) {
-                    break;
-                }
-                sum += num;
-            }
-            Console.WriteLine(sum);
+            //for (; ; ) { 
+            //    num = int.Parse(Console.ReadLine());
+            //    if (num == 0) {
+            //        break;
+            //    }
+            //    sum += num;
+            //}
+            //Console.WriteLine(sum);
         }
     }
 }
